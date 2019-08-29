@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        Hello!
+    </h1>
+    <p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius esse dolorem, cumque libero suscipit, aperiam laborum iusto explicabo illum laudantium, recusandae et dicta? Cumque explicabo facere maxime quas dolore totam.</span>
+    </p>
+</body>
+
+</html>
+<script>
+    // 1
+    //{‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}
+    function NewNumber( number) {
+        if (number > 999 && number < 0) {
+            console.log("Число не в диапазоне от 0 до 999!");
+            return null;
+        }
+        var n1_= number % 10;
+        var n10_=(number % 100) - n1_;
+        var n100_= (number % 1000)- (n10_ + n1_);
+        var numberObj = {
+            n1: n1_,
+            n10: n10_ / 10,  
+            n100: n100_ / 100
+        };
+        return numberObj;
+    }
+
+    var objNumber = NewNumber(245);
+    for(i in objNumber)
+        {
+            console.log(i + ": "+objNumber[i]);
+        }
+
+</script>
