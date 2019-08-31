@@ -22,7 +22,7 @@
     // 1
     //{‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2}
     function NewNumber( number) {
-        if (number > 999 && number < 0) {
+        if (number > 999 || number < 0) {
             console.log("Число не в диапазоне от 0 до 999!");
             return null;
         }
